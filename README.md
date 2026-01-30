@@ -1,10 +1,10 @@
-# Color Auto-Clicker
+# Color Auto Clicker
 
 A lightweight application that automatically clicks based on color detection. Features two modes: target color matching and color change detection.
 
 Available in two versions: **Windows Native** (C++) and **Cross-Platform** (Electron).
 
-![ColorClicker Screenshot](screens/preview.png)
+![ColorAutoClicker Screenshot](screens/preview.png)
 
 ---
 
@@ -64,7 +64,7 @@ Available in two versions: **Windows Native** (C++) and **Cross-Platform** (Elec
 build.bat
 
 # Run
-ColorClicker.exe
+ColorAutoClicker.exe
 ```
 
 ### Cross-Platform
@@ -143,7 +143,7 @@ See [BUILD.md](BUILD.md) for complete build instructions including automated Git
 build.bat
 ```
 
-**Output**: `ColorClicker.exe` (~1.8 MB)
+**Output**: `ColorAutoClicker.exe` (~1.8 MB)
 
 ### Cross-Platform (Electron)
 

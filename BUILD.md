@@ -1,4 +1,4 @@
-# Building Color Auto-Clicker - Multi-Platform
+# Building Color Auto Clicker - Multi-Platform
 
 This guide covers building the cross-platform Electron version for Windows, macOS, and Linux using **GitHub Actions**.
 
@@ -66,9 +66,9 @@ git push origin main --tags
 
 | Platform | Files | Size |
 |----------|-------|------|
-| **Windows** | ColorClicker.exe | ~68 MB |
-| **macOS** | ColorClicker.dmg + ColorClicker-mac.zip (Universal) | ~100 MB |
-| **Linux** | ColorClicker.AppImage + .deb packages (x64 + arm64) | ~100 MB |
+| **Windows** | ColorAutoClicker.exe | ~68 MB |
+| **macOS** | ColorAutoClicker.dmg + ColorAutoClicker-mac.zip (Universal) | ~100 MB |
+| **Linux** | ColorAutoClicker.AppImage + .deb packages (x64 + arm64) | ~100 MB |
 
 **Build time:** ~20 minutes (all platforms in parallel)
 

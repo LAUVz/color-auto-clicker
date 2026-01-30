@@ -14,12 +14,12 @@ if errorlevel 1 (
     echo ERROR: Resource compilation failed
     exit /b 1
 )
-echo Building ColorClicker.exe...
-cl.exe main.cpp app.res /EHsc /std:c++17 /D_UNICODE /DUNICODE /Fe:ColorClicker.exe /link user32.lib gdi32.lib gdiplus.lib comctl32.lib /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup /nologo
+echo Building ColorAutoClicker.exe...
+cl.exe main.cpp app.res /EHsc /std:c++17 /D_UNICODE /DUNICODE /Fe:ColorAutoClicker.exe /link user32.lib gdi32.lib gdiplus.lib comctl32.lib /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup /nologo
 if errorlevel 1 (
     echo ERROR: Build failed
     exit /b 1
 )
 echo.
-echo Build successful! ColorClicker.exe has been created.
+echo Build successful! ColorAutoClicker.exe has been created.
 echo.

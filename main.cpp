@@ -92,7 +92,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
     wc.lpfnWndProc = WndProc;
     wc.hInstance = hInstance;
     wc.hbrBackground = CreateSolidBrush(Theme::BG_DARK);
-    wc.lpszClassName = L"ColorClickerClass";
+    wc.lpszClassName = L"ColorAutoClickerClass";
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);
     wc.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_APPICON));
     wc.hIconSm = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_APPICON));
@@ -111,8 +111,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 
     hwndMain = CreateWindowEx(
         WS_EX_TOPMOST | WS_EX_COMPOSITED,
-        L"ColorClickerClass",
-        L"Color Auto-Clicker",
+        L"ColorAutoClickerClass",
+        L"Color Auto Clicker",
         WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
         posX, posY, windowWidth, windowHeight,
         NULL, NULL, hInstance, NULL
@@ -199,7 +199,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             SetBkMode(hdcMem, TRANSPARENT);
             SetTextColor(hdcMem, Theme::TEXT_PRIMARY);
             RECT titleRect = {30, 20, 280, 50};
-            DrawText(hdcMem, L"Color Auto-Clicker", -1, &titleRect, DT_LEFT | DT_VCENTER | DT_SINGLELINE);
+            DrawText(hdcMem, L"Color Auto Clicker", -1, &titleRect, DT_LEFT | DT_VCENTER | DT_SINGLELINE);
 
             SelectObject(hdcMem, hFontLabel);
             RECT statusBadge = {270, 25, 340, 45};

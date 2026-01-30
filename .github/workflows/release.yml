@@ -55,17 +55,17 @@ jobs:
         run: rc.exe /nologo app.rc
 
       - name: Build C++ Native
-        run: cl.exe main.cpp app.res /EHsc /std:c++17 /D_UNICODE /DUNICODE /Fe:ColorClicker.exe /link user32.lib gdi32.lib gdiplus.lib comctl32.lib /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup /nologo
+        run: cl.exe main.cpp app.res /EHsc /std:c++17 /D_UNICODE /DUNICODE /Fe:ColorAutoClicker.exe /link user32.lib gdi32.lib gdiplus.lib comctl32.lib /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup /nologo
 
       - name: Rename C++ executable
-        run: mv ColorClicker.exe Windows-${{ matrix.arch }}-ColorClicker-Native.exe
+        run: mv ColorAutoClicker.exe win-${{ matrix.arch }}-ColorAutoClicker-native-${{ steps.package-version.outputs.version }}.exe
         shell: bash
 
       - name: Upload Native Windows artifact
         uses: actions/upload-artifact@v4
         with:
           name: windows-native-${{ matrix.arch }}-build
-          path: Windows-${{ matrix.arch }}-ColorClicker-Native.exe
+          path: win-${{ matrix.arch }}-ColorAutoClicker-native-${{ steps.package-version.outputs.version }}.exe
           retention-days: 30
 
   build-windows-electron:
@@ -104,7 +104,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-electron-build
-          path: release/*-ColorClicker-*.exe
+          path: release/*-ColorAutoClicker-*.exe
           retention-days: 30
 
   build-macos:
@@ -135,7 +135,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: macos-build
-          path: release/*-ColorClicker-*.zip
+          path: release/*-ColorAutoClicker-*.zip
           retention-days: 30
 
   build-linux:
@@ -172,8 +172,8 @@ jobs:
         with:
           name: linux-build
           path: |
-            release/*-ColorClicker-*.AppImage
-            release/*-ColorClicker-*.deb
+            release/*-ColorAutoClicker-*.AppImage
+            release/*-ColorAutoClicker-*.deb
           retention-days: 30
 
   create-release:
@@ -198,13 +198,13 @@ jobs:
             artifacts/macos-build/*
             artifacts/linux-build/*
           body: |
-            ## Color Auto-Clicker ${{ github.ref_name }}
+            ## Color Auto Clicker ${{ github.ref_name }}
 
             ### Downloads
-            - **ColorClicker-Native-Windows.exe** - Native C++ version (1.8MB, fastest)
-            - **ColorClicker-Electron-Windows.exe** - Electron version (68MB, cross-platform)
-            - **ColorClicker.dmg / .zip** - macOS (Intel + Apple Silicon)
-            - **ColorClicker.AppImage / .deb** - Linux (x64 + ARM64)
+            - **ColorAutoClicker-Native-Windows.exe** - Native C++ version (1.8MB, fastest)
+            - **ColorAutoClicker-Electron-Windows.exe** - Electron version (68MB, cross-platform)
+            - **ColorAutoClicker.dmg / .zip** - macOS (Intel + Apple Silicon)
+            - **ColorAutoClicker.AppImage / .deb** - Linux (x64 + ARM64)
 
             ### What's New
             - Lightweight color detection and auto-clicker

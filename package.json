@@ -1,6 +1,6 @@
 {
   "name": "color-clicker",
-  "version": "1.0.0.1",
+  "version": "1.0.1",
   "description": "Cross-platform color detection and auto-clicker",
   "main": "dist/main.js",
   "scripts": {

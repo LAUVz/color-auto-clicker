@@ -5,8 +5,8 @@ IDI_APPICON ICON "assets\\pointer.ico"
 
 // Version Information
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,1
- PRODUCTVERSION 1,0,0,1
+ FILEVERSION 1,0,1
+ PRODUCTVERSION 1,0,1
  FILEFLAGSMASK 0x3fL
  FILEFLAGS 0x0L
  FILEOS 0x40004L
@@ -19,12 +19,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Veloxim"
             VALUE "FileDescription", "Color Auto-Clicker - Automated clicking based on color detection"
-            VALUE "FileVersion", "1.0.0.1"
+            VALUE "FileVersion", "1.0.1"
             VALUE "InternalName", "ColorClicker"
             VALUE "LegalCopyright", "Copyright (C) 2026"
             VALUE "OriginalFilename", "ColorClicker.exe"
             VALUE "ProductName", "Color Auto-Clicker"
-            VALUE "ProductVersion", "1.0.0.1"
+            VALUE "ProductVersion", "1.0.1"
             VALUE "Author", "Henrijs Kons"
         END
     END

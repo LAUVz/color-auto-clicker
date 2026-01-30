@@ -37,7 +37,7 @@
   "build": {
     "appId": "com.veloxim.colorclicker",
     "productName": "ColorClicker",
-    "artifactName": "${platform}-${productName}-${version}.${ext}",
+    "artifactName": "${os}-${arch}-${productName}-${version}.${ext}",
     "directories": {
       "output": "release"
     },

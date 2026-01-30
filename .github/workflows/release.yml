@@ -79,7 +79,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-electron-build
-          path: release/win-*-ColorClicker-*.exe
+          path: release/*-ColorClicker-*.exe
           retention-days: 30
 
   build-macos:
@@ -110,7 +110,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: macos-build
-          path: release/mac-*-ColorClicker-*.zip
+          path: release/*-ColorClicker-*.zip
           retention-days: 30
 
   build-linux:
@@ -147,8 +147,8 @@ jobs:
         with:
           name: linux-build
           path: |
-            release/linux-*-ColorClicker-*.AppImage
-            release/linux-*-ColorClicker-*.deb
+            release/*-ColorClicker-*.AppImage
+            release/*-ColorClicker-*.deb
           retention-days: 30
 
   create-release:

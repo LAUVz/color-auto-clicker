@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Auto-Clicker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="title">Color Auto-Clicker</h1>
+      <div class="status-badge" id="statusBadge">OFF</div>
+    </div>
+
+    <!-- Detection Mode Fieldset -->
+    <fieldset class="fieldset">
+      <legend>Detection Mode</legend>
+      <div class="radio-group">
+        <button class="radio-button selected" id="radioTarget" data-mode="target">Target Color</button>
+        <button class="radio-button" id="radioChange" data-mode="change">Color Change</button>
+      </div>
+    </fieldset>
+
+    <!-- Target Color Fieldset -->
+    <fieldset class="fieldset">
+      <legend>Target Color</legend>
+      <div class="color-preview" id="targetColorPreview">
+        <div class="color-box" id="targetColorBox"></div>
+        <div class="color-label" id="targetColorLabel">Not Set</div>
+      </div>
+      <button class="gradient-button pick-button" id="pickColorBtn">
+        Pick Color (Numpad 8)
+      </button>
+    </fieldset>
+
+    <!-- Current Color Fieldset -->
+    <fieldset class="fieldset">
+      <legend>Current Color</legend>
+      <div class="color-preview" id="currentColorPreview">
+        <div class="color-box" id="currentColorBox"></div>
+        <div class="color-label" id="currentColorLabel">#000000</div>
+      </div>
+    </fieldset>
+
+    <!-- Start/Stop Button -->
+    <button class="gradient-button start-button" id="toggleBtn">
+      START (Numpad 2)
+    </button>
+  </div>
+
+  <script src="../dist/renderer.js"></script>
+</body>
+</html>

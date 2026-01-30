@@ -1,0 +1,68 @@
+# Compiled executables
+*.exe
+
+# Object files
+*.obj
+*.o
+
+# Resource compiled files
+*.res
+
+# Visual Studio files
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Build directories
+build/
+bin/
+obj/
+
+# IDE files
+.vs/
+.vscode/
+*.suo
+*.user
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*~
+
+# Windows thumbnail cache
+Thumbs.db
+desktop.ini
+
+# Node modules and dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# TypeScript build output
+dist/
+*.tsbuildinfo
+
+# Electron build output
+release/
+out/
+
+# macOS files
+.DS_Store
+*.dmg
+*.pkg
+
+# Linux files
+*.AppImage
+*.deb
+*.rpm
+
+# Test files
+debug-electron.js
+minimal-test.js
+test-electron.js
+build-win.log

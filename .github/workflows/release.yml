@@ -33,14 +33,14 @@ jobs:
         run: cl.exe main.cpp app.res /EHsc /std:c++17 /D_UNICODE /DUNICODE /Fe:ColorClicker.exe /link user32.lib gdi32.lib gdiplus.lib comctl32.lib /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup /nologo
 
       - name: Rename C++ executable
-        run: mv ColorClicker.exe ColorClicker-Native-Windows.exe
+        run: mv ColorClicker.exe Windows-ColorClicker-Native.exe
         shell: bash
 
       - name: Upload Native Windows artifact
         uses: actions/upload-artifact@v4
         with:
           name: windows-native-build
-          path: ColorClicker-Native-Windows.exe
+          path: Windows-ColorClicker-Native.exe
           retention-days: 30
 
   build-windows-electron:
@@ -75,15 +75,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Rename Electron executable
-        run: mv release/ColorClicker.exe release/ColorClicker-Electron-Windows.exe
-        shell: bash
-
       - name: Upload Electron Windows artifact
         uses: actions/upload-artifact@v4
         with:
           name: windows-electron-build
-          path: release/ColorClicker-Electron-Windows.exe
+          path: release/win-*-ColorClicker-*.exe
           retention-days: 30
 
   build-macos:
@@ -114,9 +110,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: macos-build
-          path: |
-            release/*.dmg
-            release/*.zip
+          path: release/mac-*-ColorClicker-*.zip
           retention-days: 30
 
   build-linux:
@@ -153,8 +147,8 @@ jobs:
         with:
           name: linux-build
           path: |
-            release/*.AppImage
-            release/*.deb
+            release/linux-*-ColorClicker-*.AppImage
+            release/linux-*-ColorClicker-*.deb
           retention-days: 30
 
   create-release:

@@ -1,4 +1,7 @@
 @echo off
+echo Generating app.rc with version from package.json...
+call generate-version.bat
+echo.
 echo Setting up Visual Studio 2022 environment...
 call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" > nul
 if errorlevel 1 (

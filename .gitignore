@@ -66,3 +66,7 @@ debug-electron.js
 minimal-test.js
 test-electron.js
 build-win.log
+
+# Auto-generated files (generated from templates)
+app.rc
+

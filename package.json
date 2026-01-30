@@ -20,7 +20,10 @@
     "auto-clicker",
     "cross-platform"
   ],
-  "author": "Henrijs Kons",
+  "author": {
+    "name": "Henrijs Kons",
+    "email": "henrijskons@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.1.0",
@@ -52,10 +55,6 @@
     },
     "mac": {
       "target": [
-        {
-          "target": "dmg",
-          "arch": ["x64", "arm64"]
-        },
         {
           "target": "zip",
           "arch": ["x64", "arm64"]
